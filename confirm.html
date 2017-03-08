@@ -1,0 +1,68 @@
+<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-3 col-md-1 col-sm-3 col-xs-3">
+			</div>
+			<div class="col-lg-7 col-md-4 col-sm-7 col-xs-7 thank">
+				Confirmation: Thank You for shopping with us.
+			</div>
+</div>
+
+<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-5 col-md-4 col-sm-7 col-xs-7 box">
+				<img ng-src={{ipath}} style="width: 450px; height: 300px;">
+			</div>
+</div>
+
+<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-4 col-md-1 col-sm-3 col-xs-3">
+			</div>
+			<div class="col-lg-6 col-md-4 col-sm-7 col-xs-7 thank">
+				We will ship your item soon.
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 thank">
+			</div>
+			<div class="col-lg-5 col-md-4 col-sm-7 col-xs-7 thank">
+				--Order Details--
+			</div>
+</div>
+
+<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-1 col-sm-3 col-xs-3">
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-7 col-xs-7 errormsg">
+				Full Name:
+			</div>
+			<div class=" col-lg-3 msg">{{first}}  {{last}} </div>
+</div>
+
+<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-1 col-sm-3 col-xs-3">
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-7 col-xs-7 errormsg">
+				Shipping Address :
+			</div>
+			<div class=" col-lg-3 msg">{{adrs}}, {{zcode}}</div>
+</div>
+
+<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-1 col-sm-3 col-xs-3">
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-7 col-xs-7 errormsg">
+				We will contact you on this no-->
+			</div>
+			<div class=" col-lg-3 msg">{{pno}}</div>
+</div>
+
+<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-1 col-sm-3 col-xs-3">
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-7 col-xs-7 errormsg">
+				Final Price :
+			</div>
+			<div class=" col-lg-3 msg">${{amount.price}}</div>
+</div>
+<div class="row" style="margin-top: 50px;">
+				<div class="col-lg-4 col-md-3 col-sm-2 col-xs-2"></div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" >
+						<button style="font-size: 30px; width: 300px;"  class="btn btn-lg btn-danger" ng-click="home()">Go Back to home</button>
+					</div>
+</div>

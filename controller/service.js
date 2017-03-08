@@ -1,0 +1,2 @@
+guitarapp.service('selecteddata',function(){
+});

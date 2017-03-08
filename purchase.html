@@ -1,0 +1,255 @@
+<div class="row" style="margin-top: 50px;">
+			<!-- <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3"></div> -->
+			<div class="col-md-12 col-lg-6">
+				<img ng-src={{path}} style="width: 600px; height: 350px; margin-left: 20px">
+			</div>
+
+			<div class="col-md-12 col-lg-5">
+				<ul style="list-style: none">
+					<li>
+						<h2 style="color:red;">Price : $ {{selected.price}}</h2>
+					</li>
+					<li>
+						<h2>Product Description:</h2>
+						<p style="font-size: 22px; text-align: justify;">{{selected.product_description}}</p>
+						<hr>
+					</li>
+					<li>
+						<h2> Additional Charges :</h2>
+						<h3>{{selected.shipping_details}}</h3>
+					</li>
+				</ul>
+			</div>
+</div>
+<div ng-show="pur">
+	<div class="row" style="margin-top: 50px;">
+				<h1 class="col-xs-12" style="color:#dd0d30; text-align:center"> Purchase Form</h1>
+	</div>
+	<div class="row">
+		<div class="col-lg-4 col-md-4">
+
+		</div>
+		<div class="col-lg-6 col-md-8 col-xs-12">
+			<form class="form-horizontal" name="login">
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">First Name:</label>
+			    <div class="col-sm-6">
+						<input ng-model="fname" type="text" placeholder="John" name="fname " class="form-control col-xs-4" ng-required="true" ng-pattern='/^[a-zA-Z]+$/'  >
+						<span ng-show="login.fname.$invalid && login.fname.$dirty" class="">
+						Please Enter Characters Only</span>
+			    </div>
+			  </div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">Last Name:</label>
+			    <div class="col-sm-6">
+						<input type="text" ng-required="true" ng-pattern='/^[a-zA-Z]+$/' ng-model="lname" name="lname" placeholder="Doe" class="form-control" >
+						<span ng-show="login.lname.$invalid && login.lname.$dirty">
+						Please Enter Characters Only</span>
+			    </div>
+			  </div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Email:</label>
+			    <div class="col-sm-6">
+						<input type="email" ng-model="mail" name="mail" placeholder="johndoe@example.com" class="form-control" ng-required="true" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" >
+						<span ng-show="login.mail.$invalid && login.mail.$dirty">
+						Format Should be abc@xyz.com</span>
+			    </div>
+			  </div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Password:</label>
+					<div class="col-sm-6">
+						<input type="Password" ng-model="password" name="pwd" placeholder="Password" class="form-control" ng-required="true" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" >
+						<span ng-show="login.pwd.$invalid && login.pwd.$dirty">
+						Must contain 1 uppercase,1 lower case and 1 special character and minimum length should be 8 characters</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Credit-Card:</label>
+					<div class="col-sm-6">
+						<input type="number" ng-model="cc" name="card" placeholder="4204 4521 0000 8745" class="form-control" ng-required="true" ng-pattern="/^\d{16}$/" >
+						<span ng-show="login.card.$invalid && login.card.$dirty">
+						Must be 16 digits</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Address:</label>
+					<div class="col-sm-6">
+						<input type="text" ng-model="address" name="address" placeholder="123 Street CA 07076" class="form-control" >
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Zip Code:</label>
+					<div class="col-sm-6">
+						<input type="text" ng-model="zipcode" name="zipcode" placeholder="12345" class="form-control" ng-required="true" ng-pattern="/^\d{5}$/" >
+						<span ng-show="login.zipcode.$invalid && login.zipcode.$dirty">
+						Must be 5 digits only</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Phone No:</label>
+					<div class="col-sm-6">
+						<input type="number" ng-model="phone" ng-required="true" name="phoneno" placeholder="714-865-0000 " class="form-control" ng-pattern="/^\d{10}$/" >
+						<span ng-show="login.phoneno.$invalid && login.phoneno.$dirty">
+						Must be 10 digits only</span>
+					</div>
+				</div>
+
+
+
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-primary" ng-disabled="login.$invalid" ng-click="review()">Review Cart</button>
+			    </div>
+			  </div>
+			</form>
+		</div>
+		<div class="col-lg-2">
+
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <form name="login"> -->
+		<!-- <div class="row" style="margin-top: 50px;">
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+					<label class="col-lg-2 col-md-2 col-sm-4 col-xs-4">First Name:</label>
+					<input ng-model="fname" type="text" placeholder="Enter Your First Name Here" name="fname " class=" col-xs-4" ng-required="true" ng-pattern='/^[a-zA-Z]+$/'  >
+					<span ng-show="login.fname.$invalid && login.fname.$dirty" class="">
+					Please Enter Characters Only</span>
+		</div>
+
+	<div class="row" style="margin-top: 25px;">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-4">Last Name:</label>
+				<input type="text" ng-required="true" ng-pattern='/^[a-zA-Z]+$/' ng-model="lname" name="lname" placeholder="Enter Your Last Name Here" class="col-xs-4" >
+				<span ng-show="login.lname.$invalid && login.lname.$dirty">
+				Please Enter Characters Only</span>
+	</div> -->
+
+	<!-- <div class="row" style="margin-top: 25px;">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-4">Credit-Card:</label>
+				<input type="number" ng-model="cc" name="card" placeholder="Enter your 16 digit card number" class="col-xs-4" ng-required="true" ng-pattern="/^\d{16}$/" >
+				<span ng-show="login.card.$invalid && login.card.$dirty">
+				Must be 16 digits</span>
+	</div> -->
+
+	<!-- <div class="row" style="margin-top: 25px;">
+				<div class="col-xs-2"></div>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-4">Email:</label>
+				<input type="email" ng-model="mail" name="mail" placeholder="Email-ID " class="col-xs-4" ng-required="true" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" >
+				<span ng-show="login.mail.$invalid && login.mail.$dirty">
+				Format Should be abc@xyz.com</span>
+	</div> -->
+
+	<!-- <div class="row" style="margin-top: 25px;">
+				<div class="col-xs-2"></div>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-4">Phone No:</label>
+				<input type="number" ng-model="phone" ng-required="true" name="phoneno" placeholder="Phone-No " class="col-xs-4" ng-pattern="/^\d{10}$/" >
+				<span ng-show="login.phoneno.$invalid && login.phoneno.$dirty">
+				Must be 10 digits only</span>
+	</div> -->
+	<!-- <div class="row" style="margin-top: 25px;">
+				<div class="col-xs-2"></div>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-4">Password:</label>
+
+	</div> -->
+	<!-- <div class="row" style="margin-top: 25px;">
+				<div class="col-xs-2"></div>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-4">Address:</label>
+				<input type="text" ng-model="address" name="address" placeholder="Address " class="col-xs-4" >
+	</div> -->
+	<!-- <div class="row" style="margin-top: 25px;">
+				<div class="col-xs-2"></div>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-4">Zipcode:</label>
+
+	</div> -->
+
+	<!-- <div class="row" style="margin-top: 25px;">
+				<div class="col-xs-2"></div>
+				<label class="col-xs-6">All fields are mandotary</label>
+	</div> -->
+
+	<!-- <div class="row" style="margin-top: 50px;">
+				<div class="col-lg-4 col-md-5 col-sm-3 col-xs-3"></div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" >
+						<button style="font-size: 30px; width: 300px;"  class="btn btn-lg btn-danger" ng-disabled="login.$invalid" ng-click="review()">Go to review</button>
+					</div>
+	</div> -->
+	<!-- </form> -->
+
+
+
+<div ng-hide="review1" class="review1" style="margin-top: 50px;">
+	<div class="row " >
+			<div class="col-lg-3 col-md-3 col-sm-1 col-xs-1"></div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+			Your Email Id is your User-Name </div>
+	</div>
+	<div class="row " style="margin-top: 50px;" >
+			<div class="col-lg-3 col-md-3 col-sm-1 col-xs-1"></div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+			First Name:   <b style="color: black;"> {{fname}} </b></div>
+	</div>
+	<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-3 col-md-3 col-sm-1 col-xs-1"></div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+			Last Name:   <b style="color: black;">   {{lname}}</b> </div>
+	</div>
+	<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-3 col-md-3 col-sm-1 col-xs-1"></div>
+			<div class="col-lg-8 col-md-6 col-sm-6 col-xs-6 ">
+			Your confirmation will be sent to:    <b style="color: black;"> {{mail}} </b></div>
+	</div>
+	<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-3 col-md-3 col-sm-1 col-xs-1"></div>
+			<div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 ">
+			Check your address before confirmation:
+			<b style="color: black;">{{address}},{{zipcode}}</b> </div>
+	</div>
+	<div class="row" style="margin-top: 50px;">
+			<div class="col-lg-3 col-md-3 col-sm-1 col-xs-1"></div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+			Total-$ <b style="color: black;">{{selected.price}}</b> </div>
+	</div>
+	<div class="row" style="margin-top: 50px;" >
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><button class="btn btn-lg btn-danger" ng-click="edit()">Edit</button></div>
+			<div class="col-lg-4 col-md-4 col-sm-5 col-xs-5"></div>
+			<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><button class="btn btn-lg btn-danger" ng-click="confirm()">Confirm Order</button></div>
+		</div>
+</div>
