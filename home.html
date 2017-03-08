@@ -2,19 +2,19 @@
 		<div class="row" style="margin-top: 50px;">
 			<!-- <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"></div> -->
 			<div class="col-xs-6">
-				<img src="img/blackGuitar.png" ng-src={{slide}} style="width:600px; height: 300px; margin-left:80px">
+				<img  ng-src={{slide}} style="width:600px; height: 300px; margin-left:80px">
 				<br>
 				<button class="btn btn-lg btn-success" ng-click="previous()" style="margin-right:300px; margin-left:50px">&lt</button>
 				<button class="btn btn-lg btn-success" ng-click="next()" style="margin-left:300px">&gt</button>
 			</div>
 			<div class="col-xs-6">
-				<button class="btn btn-lg btn-primary" ng-click='info1(); pinfo()'>Product Description</button>
+				<button class="btn btn-lg btn-primary" ng-click=' pinfo()'>Product Description</button>
 				<div class="" ng-if='val'>
 					{{info.product_description}}
 				</div>
 				<br>
 				<br>
-				<button class="btn btn-lg btn-primary" ng-click='info1(); sinfo()'>Shipping Information</button>
+				<button class="btn btn-lg btn-primary" ng-click=' sinfo()'>Shipping Information</button>
 				<div ng-if='sval'>
 					{{info.shipping_details}}
 				</div>
@@ -29,7 +29,7 @@
 		<div class="row" style="margin-top: 50px;">
 				<div class="col-xs-12">
 					<hr>
-					<button class="btn btn-lg" ng-click='info1(); cinfo()' style="margin-left:20px">Reviews</button>
+					<button class="btn btn-lg" ng-click='info1()' style="margin-left:20px">Reviews</button>
 					<div style="margin-left:20px;">
 						<h3>{{info.customer_reviews}}</h3>
 					</div>
